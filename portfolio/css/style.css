@@ -1,0 +1,388 @@
+/* =========================================================
+   Arslan Ali — Portfolio Stylesheet
+   Lab 3: external CSS, float/clear layout, no frameworks/JS
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f3;
+    color: #111827;
+}
+
+/* ---------- Header & horizontal nav (float-based) ---------- */
+
+header {
+    background-color: #0b1f3a;
+    color: white;
+    padding: 22px 8%;
+}
+
+/* clearfix: contains the floated logo and nav below */
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header h2 {
+    float: left;
+    margin: 0;
+    letter-spacing: 2px;
+    line-height: 32px;
+}
+
+header span {
+    color: #c9a227;
+}
+
+nav {
+    float: right;
+}
+
+nav a {
+    float: left;
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+nav a:hover {
+    color: #c9a227;
+}
+
+/* ---------- Page banner (heading) ---------- */
+
+.heading {
+    padding: 70px 10% 40px;
+    background-color: #0b1f3a;
+    color: white;
+}
+
+.heading p {
+    color: #c9a227;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.heading h1 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background-color: #07111f;
+    color: #9ca3af;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+/* =========================================================
+   Home page — hero with floated profile photo
+   ========================================================= */
+
+.hero {
+    padding: 80px 10%;
+}
+
+/* clearfix: contains the floated profile image */
+.hero::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.small-title {
+    color: #c9a227;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 64px;
+    margin: 15px 0;
+    line-height: 1.05;
+    color: #0b1f3a;
+}
+
+.hero h1 span {
+    color: #c9a227;
+}
+
+.hero p {
+    color: #6b7280;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 25px;
+    background-color: #0b1f3a;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #c9a227;
+    color: #0b1f3a;
+}
+
+/* Profile photo floats right; hero-text wraps beside it */
+.profile {
+    float: right;
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 8px solid white;
+    box-shadow: 0 10px 30px #d0d0d0;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.intro {
+    background-color: #0b1f3a;
+    color: white;
+    padding: 55px 10%;
+}
+
+.intro h2 {
+    color: #c9a227;
+}
+
+.intro p {
+    max-width: 800px;
+    line-height: 1.8;
+    color: #d1d5db;
+}
+
+@media (max-width: 800px) {
+    header h2,
+    nav {
+        float: none;
+        text-align: center;
+    }
+
+    nav a {
+        float: none;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .profile {
+        float: none;
+        display: block;
+        margin: 0 auto 25px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero {
+        text-align: center;
+    }
+}
+
+/* =========================================================
+   Shared container (Skills & Hobbies pages)
+   ========================================================= */
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+/* ---------- Skills page ---------- */
+
+.section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px #dddddd;
+}
+
+.section h2 {
+    color: #0b1f3a;
+    border-bottom: 2px solid #c9a227;
+    padding-bottom: 12px;
+}
+
+.skill {
+    padding: 15px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.skill:last-child {
+    border-bottom: none;
+}
+
+.skill-name {
+    font-weight: bold;
+    color: #0b1f3a;
+}
+
+.description {
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+/* ---------- Hobbies page ---------- */
+
+.hobby {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-left: 5px solid #c9a227;
+    box-shadow: 0 5px 20px #dddddd;
+}
+
+.hobby h2 {
+    color: #0b1f3a;
+    margin-top: 0;
+}
+
+.hobby p {
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   Contact page
+   ========================================================= */
+
+.contact-container {
+    width: 70%;
+    margin: 50px auto;
+}
+
+.contact-box {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 5px 20px #dddddd;
+}
+
+.contact-box h2 {
+    color: #0b1f3a;
+}
+
+.contact-box > p {
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+.contact-item {
+    border-top: 1px solid #dddddd;
+    padding: 20px 0;
+}
+
+.contact-item h3 {
+    color: #c9a227;
+    margin-bottom: 8px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.contact-item p {
+    margin: 0;
+    color: #0b1f3a;
+    font-size: 17px;
+}
+
+.contact-item a {
+    color: #0b1f3a;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #c9a227;
+}
+
+@media (max-width: 700px) {
+    .contact-container {
+        width: 90%;
+    }
+}
+
+/* =========================================================
+   Gallery page — floated image cards + clearfix
+   ========================================================= */
+
+.gallery {
+    width: 85%;
+    margin: 50px auto;
+}
+
+/* clearfix: contains the floated image cards */
+.gallery::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.image-card {
+    float: left;
+    width: 46%;
+    margin: 0 2% 30px 2%;
+    background-color: white;
+    padding: 12px;
+    box-shadow: 0 5px 20px #dddddd;
+    overflow: hidden;
+}
+
+.image-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.image-card h3 {
+    color: #0b1f3a;
+    margin: 18px 10px 5px;
+}
+
+.image-card p {
+    color: #6b7280;
+    margin: 5px 10px 15px;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .heading {
+        padding: 50px 8% 35px;
+    }
+
+    .heading h1 {
+        font-size: 40px;
+    }
+
+    .gallery {
+        width: 90%;
+    }
+
+    .image-card {
+        float: none;
+        width: 100%;
+        margin: 0 0 25px 0;
+    }
+}

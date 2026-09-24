@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arslan Ali | Home</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f3;
+            color: #111827;
+        }
+
+        header {
+            background-color: #0b1f3a;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        header span {
+            color: #c9a227;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #c9a227;
+        }
+
+        .hero {
+            min-height: 80vh;
+            padding: 80px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .small-title {
+            color: #c9a227;
+            font-size: 14px;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            margin: 15px 0;
+            line-height: 1.05;
+            color: #0b1f3a;
+        }
+
+        .hero h1 span {
+            color: #c9a227;
+        }
+
+        .hero p {
+            color: #6b7280;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 25px;
+            background-color: #0b1f3a;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #c9a227;
+            color: #0b1f3a;
+        }
+
+        .profile {
+            width: 300px;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 8px solid white;
+            box-shadow: 0 10px 30px #d0d0d0;
+        }
+
+        .intro {
+            background-color: #0b1f3a;
+            color: white;
+            padding: 55px 10%;
+        }
+
+        .intro h2 {
+            color: #c9a227;
+        }
+
+        .intro p {
+            max-width: 800px;
+            line-height: 1.8;
+            color: #d1d5db;
+        }
+
+        footer {
+            background-color: #07111f;
+            color: #9ca3af;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+                display: inline-block;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>ARSLAN<span>.</span></h2>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="skills.html">Skills</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <div class="small-title">SOFTWARE ENGINEERING STUDENT</div>
+
+        <h1>
+            Hello, I'm<br>
+            <span>Arslan Ali.</span>
+        </h1>
+
+        <p>
+            I am a Software Engineering student who enjoys building things,
+            learning technology and continuously improving my technical skills.
+        </p>
+
+        <a href="skills.html" class="button">EXPLORE MY SKILLS</a>
+
+    </div>
+
+    <div>
+        <img src="images/profile.jpeg"
+             alt="Arslan Ali"
+             class="profile">
+    </div>
+
+</section>
+
+<section class="intro">
+
+    <h2>A little about me</h2>
+
+    <p>
+        I am currently studying Software Engineering and exploring different
+        areas of technology including web development, backend development,
+        databases and machine learning.
+    </p>
+
+    <p>
+        Outside academics, I enjoy photography, fitness, plants and learning
+        new things. This portfolio is a small introduction to who I am,
+        what I enjoy and the skills I am developing.
+    </p>
+
+</section>
+
+<footer>
+    © 2026 Arslan Ali. All Rights Reserved.
+</footer>
+
+</body>
+</html>
